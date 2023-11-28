@@ -37,6 +37,7 @@ export default class Game {
                     [0, 0, 0]
                 ];
                 break;
+                
             case 'J':
                 piece.blocks = [
                     [0, 0, 0],
