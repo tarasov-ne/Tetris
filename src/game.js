@@ -230,19 +230,19 @@ export default class Game {
                 if(this.playfield[y][x]) {
                     numberOfBlocks += 1;
                 }
+            }
                 if (numberOfBlocks === 0){
                     break;
                 }
                 else if (numberOfBlocks < columns){
                     continue;
                 }
-                else {
+                else if (numberOfBlocks === columns) {
                     lines.unshift(y); // Добавление в начало массива
                 }    
-            }
         }
         for (let index of lines){
-            this.playfield.slice(index, 1); // Удаление последнего массива
+            this.playfield.splice(index, 1); // Удаление последнего массива
             this.playfield.unshift(new Array(columns).fill(0)); // Добавление нового в начало
         }
 
